@@ -18,6 +18,18 @@ The application fetches the latest gold price and displays it in a clean dashboa
 - CSS
 - Gold Price API
 
+## Project Structure
+gold-price-dashboard/
+│
+├─ public/ # Static files
+├─ src/
+│ ├─ components/ # React components (GoldPriceCard, PriceChart, PriceConverter)
+│ ├─ hooks/ # Custom hooks (useGoldPrice)
+│ ├─ services/ # API calls
+│ ├─ App.js # Main app component
+│ └─ index.js # Entry point
+└─ package.json
+
 ## API Used
 https://api.gold-api.com/price/XAU
 
@@ -37,11 +49,5 @@ npm start
 
 5. Open the browser and go to
 http://localhost:3000
-
-## Screenshots
-
-(Add your application screenshot here)
-
-Example:
 
 ![Dashboard Screenshot](screenshot.png)
