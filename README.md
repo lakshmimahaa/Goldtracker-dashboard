@@ -1,16 +1,47 @@
-# React + Vite
+# Gold Price Tracker Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+This project is a simple React dashboard that displays the live gold price using a public API. 
+The application fetches the latest gold price and displays it in a clean dashboard interface.
 
-Currently, two official plugins are available:
+## Features
+- Fetch live gold price from API
+- Display gold price in dashboard
+- Refresh button to update price
+- Error handling for API requests
+- Simple and responsive UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+- React
+- JavaScript
+- HTML
+- CSS
+- Gold Price API
 
-## React Compiler
+## API Used
+https://api.gold-api.com/price/XAU
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How to Run the Project
 
-## Expanding the ESLint configuration
+1. Clone the repository
+git clone https://github.com/your-username/gold-price-dashboard.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Go to the project folder
+cd gold-price-dashboard
+
+3. Install dependencies
+npm install
+
+4. Start the application
+npm start
+
+5. Open the browser and go to
+http://localhost:3000
+
+## Screenshots
+
+(Add your application screenshot here)
+
+Example:
+
+![Dashboard Screenshot](screenshot.png)
