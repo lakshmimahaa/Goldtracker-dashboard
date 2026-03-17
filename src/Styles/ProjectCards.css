@@ -13,13 +13,8 @@ body {
   background: #f3f5f4;
 }
 
-ul {
-  list-style: none;
-}
-
-h1, h2, h3, h4, p {
-  margin: 0;
-}
+ul { list-style: none; }
+h1, h2, h3, h4, p { margin: 0; }
 
 /* ===================== */
 /* DASHBOARD GRID */
@@ -27,8 +22,8 @@ h1, h2, h3, h4, p {
 .dashboardGrid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 12px;
-  padding: 10px;
+  gap: 8px; /* unwanted gap reduce */
+  padding: 8px;
   align-items: start;
   grid-auto-rows: auto;
 }
@@ -43,19 +38,20 @@ h1, h2, h3, h4, p {
 .card-progress1,
 .card-tracker {
   background: #fff;
-  border-radius: 18px;
-  padding: 14px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-radius: 16px;
+  padding: 12px; /* reduce padding slightly */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   width: 100%;
   align-self: start;
+  font-size: 14px; /* base font slightly bigger */
+  line-height: 1.4; /* better spacing inside box */
 }
 
 /* ===================== */
-/* GRID POSITION WITHOUT NEGATIVE MARGINS */
-/* ===================== */
+/* GRID POSITION */
 .card-analytics { grid-column: 1 / 2; height: 44vh; }
 .card-reminders { grid-column: 2 / 3; height: 44vh; }
-.card-projects { grid-column: 3 / 4; height: 47vh; }
+.card-projects { grid-column: 3 / 4; height: 44vh; }
 
 .card-team { grid-column: 1 / 2; }
 .card-progress1 { grid-column: 2 / 3; }
@@ -69,40 +65,34 @@ h1, h2, h3, h4, p {
 
 /* ===================== */
 /* ANALYTICS */
-/* ===================== */
 .bars {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  height: 110px;
-  margin-top: 10px;
+  height: 100px;
+  margin-top: 6px;
 }
 
-.bar {
-  width: 18px;
-  border-radius: 20px;
-  background: #e5e7eb;
-}
+.bar { width: 16px; border-radius: 20px; background: #e5e7eb; }
 
-.b1 { height: 65px; }
-.b2 { height: 95px; background: #0f6b4f; }
-.b3 { height: 75px; background: #3fb58d; }
-.b4 { height: 105px; background: #134e3a; }
-.b5 { height: 80px; }
-.b6 { height: 55px; }
-.b7 { height: 70px; }
+.b1 { height: 60px; }
+.b2 { height: 90px; background: #0f6b4f; }
+.b3 { height: 70px; background: #3fb58d; }
+.b4 { height: 100px; background: #134e3a; }
+.b5 { height: 75px; }
+.b6 { height: 50px; }
+.b7 { height: 65px; }
 
 .days {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 13px; /* slightly bigger font */
   color: #888;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 /* ===================== */
 /* REMINDERS */
-/* ===================== */
 .cards {
   display: flex;
   flex-direction: column;
@@ -111,180 +101,47 @@ h1, h2, h3, h4, p {
 }
 
 .meetingBtn {
-  margin-top: 8px;
+  margin-top: 6px;
   background: linear-gradient(160deg,#0d3f35,#0a2f2a);
   color: white;
-  padding: 8px;
-  border-radius: 20px;
+  padding: 8px 10px;
+  border-radius: 18px;
   display: flex;
   gap: 6px;
   align-items: center;
   justify-content: center;
   border: none;
   cursor: pointer;
+  font-size: 13px; /* slightly bigger */
 }
 
 /* ===================== */
 /* PROJECT LIST */
-/* ===================== */
-.projectHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.newBtn {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 14px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.list {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-}
-
-.points h2 { font-size: 13px; }
-.points p { font-size: 11px; color: #6b7280; }
+.projectHeader { margin-bottom: 6px; }
+.newBtn { font-size: 13px; padding: 6px 10px; border-radius: 14px; }
 
 /* ===================== */
 /* TEAM */
-/* ===================== */
-.teamHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.addBtn {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 14px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.member {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.memberInfo {
-  flex: 1;
-  margin-left: 8px;
-}
-
-.name {
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.memberInfo small {
-  font-size: 11px;
-  color: #6b7280;
-}
-
-.statusBtns button {
-  font-size: 10px;
-  padding: 4px 6px;
-  border-radius: 6px;
-  border: none;
-}
-
-.complete { background: #22c55e; color: white; }
-.inprogress { background: orange; }
-.pending { background: #e5e7eb; }
+.name { font-size: 14px; } /* slightly bigger */
+.memberInfo small { font-size: 12px; }
 
 /* ===================== */
 /* PROGRESS */
-/* ===================== */
-.halfCircleWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.percent {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.label {
-  font-size: 12px;
-  margin-top: 4px;
-}
-
-.legend {
-  margin-top: 8px;
-  font-size: 12px;
-}
-
-.legend div {
-  margin-bottom: 4px;
-}
+.percent { font-size: 20px; }
+.label { font-size: 13px; }
+.legend { font-size: 12px; }
 
 /* ===================== */
 /* TRACKER */
-/* ===================== */
-.card-tracker h3 {
-  font-size: 14px;
-}
-
-.time {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-.trackerButtons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-}
-
-.trackerButtons button {
-  border: none;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.pause-btn {
-  background: white;
-}
-
-.stop {
-  background: red;
-  color: white;
-}
+.time { font-size: 26px; }
 
 /* ===================== */
 /* MOBILE VIEW */
-/* ===================== */
 @media (max-width: 768px) {
-
   .dashboardGrid {
     grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
+    gap: 6px;
+    padding: 6px;
   }
 
   .card-analytics,
@@ -292,16 +149,9 @@ h1, h2, h3, h4, p {
   .card-projects,
   .card-team,
   .card-progress1,
-  .card-tracker {
-    grid-column: auto;
-    height: auto; /* auto height for mobile */
-  }
+  .card-tracker { height: auto; font-size: 14px; }
 
-  .bars { height: 90px; }
-
-  .time { font-size: 20px; }
-
-  .points h2 { font-size: 12px; }
-
-  .memberInfo { margin-left: 6px; }
+  .bars { height: 80px; }
+  .time { font-size: 22px; }
+  .days { font-size: 12px; }
 }
