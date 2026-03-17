@@ -1,97 +1,57 @@
-import "../Styles/Sidebar.css";
+import {
+  FaThLarge,
+  FaTasks,
+  FaCalendar,
+  FaChartBar,
+  FaUsers,
+  FaCog,
+  FaQuestionCircle,
+  FaSignOutAlt
+} from "react-icons/fa";
+import '../Styles/Sidebar.css'
 
-import { RiDashboardFill } from "react-icons/ri";
-import { FaTasks } from "react-icons/fa";
-import { MdCalendarMonth } from "react-icons/md";
-import { HiChartBar } from "react-icons/hi";
-import { FaUsers } from "react-icons/fa";
-
-import { IoSettingsSharp } from "react-icons/io5";
-import { FaQuestionCircle } from "react-icons/fa";
-import { FaSignOutAlt } from "react-icons/fa";
-
-function Sidebar() {
+export default function Sidebar() {
   return (
     <div className="sidebar">
 
       {/* Logo */}
+      <h2 className="logo">Donezo</h2>
 
-      <div className="logo">
-        <div className="logo-icon"></div>
-        <h2>Donezo</h2>
-      </div>
+      {/* MENU */}
+      <p className="section-title">MENU</p>
 
-      <div>
+      <ul className="menu">
+        <li className="active">
+          <FaThLarge /> <span>Dashboard</span>
+        </li>
 
-        <p className="menu-title">MENU</p>
+        <li>
+          <FaTasks /> 
+          <span>Tasks</span>
+          <span className="badge">12+</span>
+        </li>
 
-        <ul>
+        <li><FaCalendar /> <span>Calendar</span></li>
+        <li><FaChartBar /> <span>Analytics</span></li>
+        <li><FaUsers /> <span>Team</span></li>
+      </ul>
 
-          <li className="active">
-            <RiDashboardFill className="icon"/>
-            Dashboard
-          </li>
+      {/* GENERAL */}
+      <p className="section-title">GENERAL</p>
 
-          <li>
-            <FaTasks className="icon"/>
-            Tasks
-            <span className="badge">12+</span>
-          </li>
+      <ul className="menu">
+        <li><FaCog /> <span>Settings</span></li>
+        <li><FaQuestionCircle /> <span>Help</span></li>
+        <li><FaSignOutAlt /> <span>Logout</span></li>
+      </ul>
 
-          <li>
-            <MdCalendarMonth className="icon"/>
-            Calendar
-          </li>
-
-          <li>
-            <HiChartBar className="icon"/>
-            Analytics
-          </li>
-
-          <li>
-            <FaUsers className="icon"/>
-            Team
-          </li>
-
-        </ul>
-
-        <p className="menu-title">GENERAL</p>
-
-        <ul>
-
-          <li>
-            <IoSettingsSharp className="icon"/>
-            Settings
-          </li>
-
-          <li>
-            <FaQuestionCircle className="icon"/>
-            Help
-          </li>
-
-          <li>
-            <FaSignOutAlt className="icon"/>
-            Logout
-          </li>
-
-        </ul>
-
-      </div>
-
-      {/* Download card */}
-
-      <div className="download-card">
-        <h4>Download our <br/> Mobile App</h4>
-        <p>Get easy in another way</p>
-
-        <button className="download-btn">
-          Download
-        </button>
+      {/* DOWNLOAD CARD */}
+      <div className="download-box">
+        <p>Download our<br />Mobile App</p>
+        <button>Download</button>
       </div>
 
     </div>
   );
 }
-
-export default Sidebar;
 

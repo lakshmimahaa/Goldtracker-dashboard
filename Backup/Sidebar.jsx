@@ -1,0 +1,301 @@
+import "../Styles/Sidebar.css";
+
+import { RiDashboardFill } from "react-icons/ri";
+import { FaTasks } from "react-icons/fa";
+import { MdCalendarMonth } from "react-icons/md";
+import { HiChartBar } from "react-icons/hi";
+import { FaUsers } from "react-icons/fa";
+
+import { IoSettingsSharp } from "react-icons/io5";
+import { FaQuestionCircle } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
+
+function Sidebar() {
+  return (
+    <div className="sidebar">
+
+      {/* Logo */}
+
+      <div className="logo">
+        <div className="logo-icon"></div>
+        <h2>Donezo</h2>
+      </div>
+
+      <div>
+
+        <p className="menu-title">MENU</p>
+
+        <ul>
+
+          <li className="active">
+            <RiDashboardFill className="icon"/>
+            Dashboard
+          </li>
+
+          <li>
+            <FaTasks className="icon"/>
+            Tasks
+            <span className="badge">12+</span>
+          </li>
+
+          <li>
+            <MdCalendarMonth className="icon"/>
+            Calendar
+          </li>
+
+          <li>
+            <HiChartBar className="icon"/>
+            Analytics
+          </li>
+
+          <li>
+            <FaUsers className="icon"/>
+            Team
+          </li>
+
+        </ul>
+
+        <p className="menu-title">GENERAL</p>
+
+        <ul>
+
+          <li>
+            <IoSettingsSharp className="icon"/>
+            Settings
+          </li>
+
+          <li>
+            <FaQuestionCircle className="icon"/>
+            Help
+          </li>
+
+          <li>
+            <FaSignOutAlt className="icon"/>
+            Logout
+          </li>
+
+        </ul>
+
+      </div>
+
+      {/* Download card */}
+
+      <div className="download-card">
+        <h4>Download our <br/> Mobile App</h4>
+        <p>Get easy in another way</p>
+
+        <button className="download-btn">
+          Download
+        </button>
+      </div>
+
+    </div>
+  );
+}
+
+export default Sidebar;
+
+
+
+.sidebar{
+width:205px;
+height:156vh;
+background:#ffffff;
+border-radius:25px;
+padding:25px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+font-family: "Inter", sans-serif;
+/* border: 2px solid red; */
+margin-left: 15px;
+margin-top: 10px;
+}
+
+.logo{
+display:flex;
+gap:18px;
+}
+
+.logo h2{
+font-size:20px;
+font-weight:700;
+color:black;
+}
+
+.logo-icon{
+width:20px;
+height:20px;
+background:black;
+border-radius:4px;
+box-shadow:
+9px 0 black,
+0 9px black,
+9px 9px black;
+}
+
+.menu-title{
+font-size:12px;
+color:#9aa3a1;
+margin:18px 0 10px 0;
+letter-spacing:1px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.sidebar li{
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px 14px;
+border-radius:10px;
+cursor:pointer;
+margin-bottom:8px;
+font-size:14px;
+color:#1fa97a;
+transition:0.2s;
+position:relative;
+}
+
+.sidebar li:hover{
+background:#f2f4f3;
+}
+
+.sidebar li.active{
+background:#e6f4ea;
+color:black;
+font-weight:600;
+}
+
+.icon{
+font-size:18px;
+color:#1fa97a;
+font-weight: 300;
+}
+
+.sidebar li.active .icon{
+color:#0f7a58;
+}
+
+.badge{
+margin-left:auto;
+background:#0f7a58;
+color:white;
+font-size:9px;
+padding:3px;
+border-radius:3px;
+font-weight:300;
+}
+
+.download-card{
+margin-top:30px;
+padding:22px;
+border-radius:20px;
+background:linear-gradient(160deg,#0d3f35,#0a2f2a);
+color:white;
+text-align:center;
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+border:2px solid palegreen;
+height: 33vh;
+width: 15vw;
+margin-left: -8px;
+}
+
+.download-card h4{
+font-size:16px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.download-card p{
+font-size:12px;
+color:#b7e4d9;
+margin-bottom:18px;
+}
+
+.download-btn{
+background:#1fa97a;
+border:none;
+padding:10px 20px;
+border-radius:25px;
+color:white;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.download-btn:hover{
+background:#169b6c;
+}
+
+
+@media (max-width: 768px) {
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    /* overflow-x: hidden; */
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex ;
+    flex-direction: column ; 
+    gap: 12px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .header {
+    order: 1;
+    width: 100%;
+  }
+
+  .sidebar {
+    order: 2;
+
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 15px;
+
+    position: static !important; 
+    margin: 0 !important;
+    top: unset;
+    left: unset;
+    transform: none !important;
+  }
+
+  .dashboard {
+    order: 3;
+    width: 100%;
+    margin: 0;
+  }
+
+  .projectCards {
+    order: 4;
+    width: 100%;
+  }
+
+  .dashboardGrid {
+    display: flex !important;
+    flex-direction: column !important; 
+    gap: 15px;
+  }
+
+  .download-card {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  
+}

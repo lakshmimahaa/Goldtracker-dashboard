@@ -1,0 +1,142 @@
+/* BODY */
+body {
+  background: #f4f6fb;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  width: calc(100% - 60px); /* reduce width */
+  margin-left: 1px; /* move left */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #ffffff; /* white card */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* SEARCH BOX */
+.search-box {
+  position: relative;
+  width: 200px;
+}
+
+/* INPUT */
+.search-box input {
+  width: 70%;
+  padding: 10px 45px 10px 40px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  background: #f9fafc;
+}
+
+/* SEARCH ICON (LEFT INSIDE) */
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+/* RIGHT ICON INSIDE INPUT */
+.inside-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ICON CIRCLE */
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  background: #f9fafc;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.icon-circle:hover {
+  background: #eef1f7;
+}
+
+/* PROFILE */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* PROFILE IMAGE */
+.profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+/* TEXT */
+.profile-text p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.profile-text span {
+  font-size: 12px;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    width: 100%;
+    margin: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .nav-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .profile {
+    margin-left: auto;
+  }
+}
