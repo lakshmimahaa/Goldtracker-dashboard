@@ -221,20 +221,11 @@ function ProjectCards() {
 
       <path
         d="M20 100 A80 80 0 0 1 180 100"
-        className="progress"
-        strokeDasharray="251"
-        strokeDashoffset="148"  
+        className="progress" strokeDasharray="251" strokeDashoffset="148"  
       />
 
-      <text
-  x="100" 
-  y="85" 
-  className="percent"
-  textAnchor="middle"        // centers horizontally
-  dominantBaseline="middle"   // centers vertically
->
-  41%
-</text>
+      <text x="100" y="85" className="percent">41%</text>
+
     </svg>
 
     <p className="label">Project Ended</p>
