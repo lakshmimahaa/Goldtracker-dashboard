@@ -1,0 +1,249 @@
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  /* border: 2px solid black; */
+  margin-left: -15px;
+  width: 78vw;
+
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.dashboard-top h1 {
+  font-size: 28px;
+  margin: 0 0 5px 0;
+  margin-left: -15px;
+
+}
+
+.dashboard-top p {
+  font-size: 12px;
+  color: #1f7a4f;
+  font-weight:100;
+  margin: 0;
+  margin-left: -15px;
+
+}
+
+.dashboard-buttons{
+  /* border: 2px solid red; */
+  margin-left: 15px;
+
+}
+.dashboard-buttons button {
+  padding: 6px 12px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  transition: 0.2s all;
+  /* border: 2px solid red; */
+}
+
+.add-btn {
+  background-color: #1f7a4f;
+  color: white;
+  height: 7vh;
+  width: 10vw;
+  border-radius: 33px;
+  /* margin-left: 55px; */
+}
+
+.import-btn {
+  background-color: #f0f0f0;
+  font-weight: 200;
+  color: #333;
+  height: 7vh;
+  width: 10vw;
+  color: #1f7a4f;
+  /* margin-left: 55px; */
+
+}
+
+.dashboard-buttons button:hover {
+  opacity: 0.85;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: 28vh;
+  width: 76vw;
+  /* border: 2px solid black; */
+  margin-left: -15px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; 
+}
+
+.card .arrow {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #1f7a4f;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.card h3 {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.card h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card.total {
+  background: linear-gradient(135deg, #1f7a4f, #0f5132);
+  color: white;
+}
+
+.card.total h3 {
+  color: white;
+}
+
+.increase {
+  font-size: 8.5px;
+  color: #1f7a4f;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card.total .increase {
+  color: #d1f5e0;
+}
+
+.increase-number {
+  background: #e8f5e9;
+  color: #1f7a4f;
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.increase-number .arrow {
+  background: #1f7a4f;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .dashboard-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .dashboard-top h1 {
+    font-size: 22px;
+    margin-left: 0;
+  }
+
+  .dashboard-top p {
+    margin-left: 0;
+    font-size: 12px;
+  }
+
+  .dashboard-buttons {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  .dashboard-buttons button {
+    flex: 1;
+    margin-left: 0;
+    height: 45px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .add-btn,
+  .import-btn {
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h1 {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 12px;
+  }
+
+  .increase {
+    font-size: 10px;
+  }
+
+  .increase-number {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .card .arrow {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+}
