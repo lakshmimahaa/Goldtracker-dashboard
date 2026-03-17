@@ -220,8 +220,7 @@ function ProjectCards() {
       />
 
       <path
-        d="M20 100 A80 80 0 0 1 180 100"
-        className="progress" strokeDasharray="251" strokeDashoffset="148"  
+        d="M20 100 A80 80 0 0 1 180 100" className="progress" strokeDasharray="251" strokeDashoffset="148"  
       />
 
       <text x="100" y="85" className="percent">41%</text>
